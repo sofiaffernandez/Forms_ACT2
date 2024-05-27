@@ -1,0 +1,117 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3f0e8;
+}
+
+.container {
+  margin: 3rem 0rem;
+  min-width: 50%;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.step-indicator:hover,
+.step-indicator:focus {
+  color: black;
+}
+
+.accordion {
+  margin-bottom: 2rem;
+}
+
+.step {
+  display: none;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.step.active {
+  display: block;
+}
+
+.stepper {
+  display: flex;
+  background-color: #6d9c82;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.step-indicator {
+  width: auto;
+  padding: 0.5rem 1rem;
+  background-color: #6d9c82;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.step-indicator.active {
+  background-color: #4c7c5a;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input, textarea {
+  width: 90%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+  border-color: #6d9c82;
+  box-shadow: 0 0 5px rgba(109, 156, 130, 0.5);
+}
+
+input.invalid, textarea.invalid {
+  border-color: rgb(197, 99, 99);
+}
+
+.button-container {
+  text-align: right;
+}
+
+button {
+  width: 8rem;
+  height: 3rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  background-color: #6d9c82;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #91aa9c;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de compra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Proceso de compra</h1>
+    <div class="stepper">
+      <a href="#personal" class="step-indicator active" id="step-personal" onclick="showStep('personal')">Datos personales</a>
+      <a href="#envio" class="step-indicator" id="step-envio" onclick="showStep('envio')">Datos de envío</a>
+      <a href="#pago" class="step-indicator" id="step-pago" onclick="showStep('pago')">Datos de pago</a>
+    </div>
+    <div class="accordion">
+      <section id="personal" class="step active">
+        <h2>Datos personales</h2>
+        <form id="form-personal">
+          <div class="form-group">
+            <label for="Nombre">Nombre:</label>
+            <input type="text" id="Nombre" name="Nombre" required>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="telefono">Telefono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+          </div>
+          <div class="button-container">
+              <button class="next" type="button" onclick="nextStep('envio')">Siguiente</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <div class="accordion">
+      <section id="envio" class="step">
+        <h2>Datos de envío</h2>
+        <form id="form-envio">
+          <div class="form-group">
+            <label for="Dirección">Dirección:</label>
+            <input type="text" id="Dirección" name="Dirección" required>
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero" required>
+            <label for="codigoPostal">Código postal:</label>
+            <input type="number" id="codigoPostal" name="codigoPostal" required>
+            <label for="comunidad">Comunidad:</label>
+            <input type="text" id="comunidad" name="comunidad" required>
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required>
+            <label for="observaciones">Observaciones:</label>
+            <textarea id="observaciones" name="observaciones"></textarea>
+          </div>
+          <div class="button-container">
+            <button class="next" type="button" onclick="nextStep('pago')">Siguiente</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <div class="accordion">
+      <section id="pago" class="step">
+        <h2>Datos de pago</h2>
+        <form id="form-pago">
+          <div class="form-group">
+            <label for="card">Número de Tarjeta:</label>
+            <input type="text" id="card" name="card" required>
+            <label for="CVV">CVV:</label>
+            <input type="number" id="CVV" name="CVV" required>
+            <label for="fecha">Fecha de caducidad:</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+          <div class="button-container">
+            <button class="finish" type="submit">Finalizar</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
